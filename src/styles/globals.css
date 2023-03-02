@@ -1,0 +1,11 @@
+html,
+body,
+body > div:first-child,
+main {
+  min-height: 100vh;
+}
+
+main {
+  padding-top: 50px;
+  background-color: #f3f5f9;
+}

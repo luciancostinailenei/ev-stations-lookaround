@@ -1,0 +1,37 @@
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Station {
+  id      Int    @id @unique @default(autoincrement())
+  name    String
+  address String
+
+  latitude  Float
+  longitude Float
+
+  company   Company @relation(fields: [companyId], references: [id])
+  companyId Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}
+
+model Company {
+  id              Int       @id @unique @default(autoincrement())
+  name            String    @unique
+  parentCompanyId Int?
+  parent          Company?  @relation("ChildrenParent", fields: [parentCompanyId], references: [id])
+  children        Company[] @relation("ChildrenParent")
+  stations        Station[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+}

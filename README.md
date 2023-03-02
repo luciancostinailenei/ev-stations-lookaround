@@ -2,6 +2,17 @@
 
 A practice project that uses existing GIS APIs to demonstrate a search for nearby EV charging stations based on a provided location and distance radius.
 
+## Tech stack
+
+- [Node.js](https://nodejs.org/)
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [GraphQL Yoga](https://the-guild.dev/graphql/yoga-server)
+- [Prisma](https://www.prisma.io/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [PostGIS](https://postgis.net/)
+
 ## Local development setup
 
 ### Pre-requisities
@@ -32,7 +43,7 @@ Follow the next steps in order to get the project up and running on your local m
 
 ### Running the app as a docker image
 
-1. Follow Local development setup - Running section points until bullet 6. included
+1. Follow Local development setup - Running section points until bullet 6. included if you haven't already followed those steps
 
 2. Run `docker build -t [image-tag] .`
 

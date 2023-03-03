@@ -19,8 +19,8 @@ A practice project that uses existing GIS APIs to demonstrate a search for nearb
 
 Make sure you have these tools installed on your local machine before proceeding:
 
-- Node.js(https://nodejs.org/en/)
-- Yarn(https://yarnpkg.com/getting-started/install)
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/getting-started/install)
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
@@ -55,5 +55,5 @@ Follow the next steps in order to get the project up and running on your local m
 
 ## Running integration tests
 
-1. Run `docker-compose down` if you have the db service running to avoid conflicting ports error for the test-db service that we're going to run (we need to work on a separate db to avoid data loss)
+1. Run `docker-compose down` if you have the PgServer container running to avoid conflicting ports error for the test-db service that we're going to run (we need to work on a separate db to avoid data loss)
 2. Run `yarn test-integration`

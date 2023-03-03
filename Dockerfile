@@ -36,7 +36,7 @@ USER nodeuser
 
 EXPOSE 3000
 
-ENV DATABASE_URL="postgresql://postgres:secret@localhost:5432/postgres?schema=public"
+ENV DATABASE_URL="postgresql://postgres:secret@host.docker.internal:5432/postgres?schema=public"
 ENV PORT 3000
 
-CMD ["node", "server.js"]
+CMD ["yarn", "start:migrate:prod"]

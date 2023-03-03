@@ -60,5 +60,8 @@ Follow the next steps in order to get the project up and running on your local m
 
 ## Room for improvements
 
-- Using some additional prisma generators to auto-generate TypeScript and GraphQL inputs based on the provided db schema
-- Using a lib to enable the definition of graphql schema via code and enable type checking
+- Using some additional prisma generators to auto-generate TypeScript and GraphQL inputs based on the provided db schema \
+_Example_: [TypeGraphQL](https://typegraphql.com/docs/prisma.html)
+- Using a lib to enable the definition of graphql schema via code and enable type checking \
+_Example_ [Nexus](https://nexusjs.org/)
+_Example_ [TypeGraphQL](https://typegraphql.com/)

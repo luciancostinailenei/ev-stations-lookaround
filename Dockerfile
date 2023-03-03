@@ -11,6 +11,7 @@ FROM base AS builder
 WORKDIR /app
 COPY --from=base /app/node_modules ./node_modules
 COPY . .
+ENV NEXT_PUBLIC_APP_HOST="http://localhost:8080"
 RUN yarn prisma generate && yarn build
 
 
@@ -35,8 +36,7 @@ USER nodeuser
 
 EXPOSE 3000
 
-ENV DATABASE_URL="postgresql://postgres:secret@0.0.0.0:5432/postgres?schema=public"
-ENV NEXT_PUBLIC_APP_HOST = "http://localhost:8080"
+ENV DATABASE_URL="postgresql://postgres:secret@localhost:5432/postgres?schema=public"
 ENV PORT 3000
 
 CMD ["node", "server.js"]

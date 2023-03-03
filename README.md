@@ -37,16 +37,23 @@ Follow the next steps in order to get the project up and running on your local m
 6. Run `yarn seed-db` (Feel free to adjust seeds located inside `prisma/seeds/seed.ts` based on your needs)
 7. Run `yarn dev` and follow the given instructions to open the app on your browser
 
+### Running the app as a docker image
+
+1. Follow above described section points until bullet 6. included - if you haven't already followed those steps
+
+2. Run `docker build -t [image-tag] .`
+   _Example:_ `docker build -t ev-stations-lookaround:v1 .`
+
+3. Run `docker run --rm -it -p 8080:3000 --name [service-name] [image-tag]`
+   _Example:_ `docker run --rm -t -p 8080:3000 --name ev-stations-lookaround ev-stations-lookaround:v1`
+
+4. Access `localhost:8080` in your browser to open the app
+
 #### Observations
 
 - docker-compose.yml file contains a service definition for a PgAdmin instance too; if you need to lookup the database settings, you can start it up too by running `docker-compose up -d pgadmin`
 
-### Running the app as a docker image
+## Running integration tests
 
-1. Follow Local development setup - Running section points until bullet 6. included if you haven't already followed those steps
-
-2. Run `docker build -t [image-tag] .`
-
-3. Run `docker run --rm -it -p 8080:3000 --name [service-name] [image-tag]`
-
-4. Access `localhost:8080` in your browser to open the app
+1. Run `docker-compose down` if you have the db service running to avoid conflicting ports error for the test-db service that we're going to run (we need to work on a separate db to avoid data loss)
+2. Run `yarn test-integration`

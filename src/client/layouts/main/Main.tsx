@@ -8,6 +8,7 @@ import {
   Heading,
   Flex,
   Box,
+  Text
 } from "@chakra-ui/react";
 import { FcGlobe, FcElectricity } from "react-icons/fc";
 import { AiOutlineArrowsAlt } from "react-icons/ai";
@@ -124,6 +125,14 @@ export default function Main() {
               * Inputs must be filled first
             </Box>
           )}
+
+          <Box color="gray.500" mt="20px" width="180px">
+            For demo purposes, you can quickly make us of Iasi, Romania coordinates:
+            <Text mt="10px">Latitude: 47.158455</Text>
+            <Text mb="10px">Longitude: 27.601442</Text>
+
+            DB is already seeded with stations within a radius of 100km.
+          </Box>
         </Box>
 
         <CompanyList />

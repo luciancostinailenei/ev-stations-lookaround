@@ -41,10 +41,10 @@ Follow the next steps in order to get the project up and running on your local m
 
 1. Follow above described section points until bullet 6. included - if you haven't already followed those steps
 
-2. Run `docker build -t [image-tag] .`
+2. Run `docker build -t [image-tag] .` \
    _Example:_ `docker build -t ev-stations-lookaround:v1 .`
 
-3. Run `docker run --rm -it -p 8080:3000 --name [service-name] [image-tag]`
+3. Run `docker run --rm -it -p 8080:3000 --name [service-name] [image-tag]` \
    _Example:_ `docker run --rm -t -p 8080:3000 --name ev-stations-lookaround ev-stations-lookaround:v1`
 
 4. Access `localhost:8080` in your browser to open the app

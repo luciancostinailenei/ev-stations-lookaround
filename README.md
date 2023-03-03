@@ -57,3 +57,8 @@ Follow the next steps in order to get the project up and running on your local m
 
 1. Run `docker-compose down` if you have the PgServer container running to avoid conflicting ports error for the test-db service that we're going to run (we need to work on a separate db to avoid data loss)
 2. Run `yarn test-integration`
+
+## Room for improvements
+
+- Using some additional prisma generators to auto-generate TypeScript and GraphQL inputs based on the provided db schema
+- Using a lib to enable the definition of graphql schema via code and enable type checking

@@ -23,7 +23,7 @@ const Station = ({
     });
 
   return (
-    <Box p="10px" borderRadius="3px" mb="20px" bgColor="#fefefe">
+    <Box p="10px" borderRadius="3px" bgColor="#fefefe">
       <Heading size="sm" as="h4" mb="5px" color="teal.400">
         {name}
       </Heading>

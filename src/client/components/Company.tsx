@@ -53,7 +53,6 @@ const Company = ({ name, companyId, parentCompanyId }: CompanyProps) => {
       sx={{ "&:hover": { cursor: "pointer" } }}
       p="10px"
       borderRadius="3px"
-      mb="10px"
       bgColor="#fefefe"
       onClick={() => onClickCompany(companyId)}
     >
